@@ -32,3 +32,38 @@ alert(jq);
   });
 });
 </script>
+
+
+2
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+<h2>This is a heading</h2>
+<?php $x=array(1,2); $y=3;?>
+<p>This is a paragraph.</p>
+<div id="test">
+  <p id="1">This is another paragraph 1.</p>
+  <p id="2">This is another paragraph 2.</p>
+  <p id="3">This is another paragraph 3.</p>
+</div>
+<button>Click me</button>
+
+</body>
+</html>
+<script>
+$(document).ready(function(){
+var jq = '<?php echo $y;?>';
+
+  $("button").click(function(){
+  alert(jq);
+    $("#test p").hide();
+    $("#1").show();
+  });
+});
+</script>
